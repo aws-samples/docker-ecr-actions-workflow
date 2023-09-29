@@ -12,3 +12,8 @@ variable "lifecycle_policy" {
   type        = string
   description = "the lifecycle policy to be applied to the ECR repo"
 }
+
+variable "aws_account_id" {
+  description = "Target AWS Account ID"
+  type        = string
+}

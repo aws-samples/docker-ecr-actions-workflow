@@ -22,7 +22,7 @@ data "aws_iam_policy_document" "ecr_repo_policy" {
     condition {
       test     = "StringEquals"
       variable = "aws:PrincipalAccount"
-      values   = ["************"]
+      values   = ["${var.aws_account_id}"]
     }
   }
   statement {
@@ -40,7 +40,7 @@ data "aws_iam_policy_document" "ecr_repo_policy" {
     condition {
       test     = "StringEquals"
       variable = "aws:PrincipalAccount"
-      values   = ["************"]
+      values   = ["${var.aws_account_id}"]
     }
   }
 }
