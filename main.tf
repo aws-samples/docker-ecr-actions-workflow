@@ -7,6 +7,10 @@ resource "aws_ecr_repository" "repository" {
   image_scanning_configuration {
     scan_on_push = true
   }
+
+  encryption_configuration {
+    encryption_type = "KMS"
+  }
 }
 
 resource "aws_ecr_lifecycle_policy" "name" {
