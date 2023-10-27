@@ -37,6 +37,10 @@ on:
         description: Target AWS Region
         default: "us-west-2"
         type: string
+      backend_dynamodb_table:
+        description: DynamoDB table for State lock
+        default: "terraform-backend-603019064074"
+        type: string
 
 # concurrency required to avoid terraform lock contention during ECR provisioning
 concurrency: ci-${{ github.repository }}-docker-pipeline
@@ -88,6 +92,7 @@ jobs:
             -backend-config='region=${{ inputs.aws_region }}' \
             -backend-config='bucket=${{ inputs.backend_s3_bucket }}' \
             -backend-config='key=docker-ecr/terraform-${{ env.ECR_REPO_NAME }}.tfstate' \
+            -backend-config='dynamodb_table=${{ inputs.backend_dynamodb_table }}' \
             -backend-config='role_arn=arn:aws:iam::${{ inputs.aws_account_id }}:role/${{ inputs.backend_iam_role }}'
         working-directory: ${{ github.action_path }}
 
