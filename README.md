@@ -35,6 +35,7 @@ This solution has the flag as "workflow_dispatch", but this can be replaced with
 - A Github Repository created
 - Terraform v1 or above installed and configured.
 - An S3 bucket for the Terraform Backend
+- A DynamoDB table for Terraform State Locking and consistency. The table must have a partition key named LockID with type of String. If not configured, state locking will be disabled.
 
 ## Setup
 - Dockerfile and any build-related data
