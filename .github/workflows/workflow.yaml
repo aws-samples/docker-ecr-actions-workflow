@@ -20,15 +20,15 @@ on:
         type: string
       backend_s3_bucket:
         description: Name of the S3bucket for Terraform backend
-        default: "terraform-backend-603019064074-primary-region"
+        default: "terraform-backend-primary-region"
         type: string
       backend_iam_role:
         description: Name of the Terraform backend assumable IAM Role
-        default: "workload-assumable-role-rmodi"
+        default: "workload-assumable-role"
         type: string
       github_iam_role:
         description: Name of the IAM Role for adding access to ECR repo
-        default: "github-actions-rmodi"
+        default: "github-actions-role"
         type: string
       aws_account_id:
         description: AWS Account ID
@@ -39,7 +39,7 @@ on:
         type: string
       backend_dynamodb_table:
         description: DynamoDB table for State lock
-        default: "terraform-backend-603019064074"
+        default: "terraform-backend-ddb"
         type: string
 
 # concurrency required to avoid terraform lock contention during ECR provisioning
