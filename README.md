@@ -49,9 +49,9 @@ The reusable Github Actions workflow template is available under the folder ".gi
 
 A sample Dockerfile is added under the directory "e2e-test", this is just for reference and execution of the pipeline.
 
-1. Either edit the ".github/workflows/workflow.yanl" file to update the inputs. This can also be passed via the console when triggering manually.
+1. Either edit the ".github/workflows/workflow.yaml" file to update the inputs. This can also be passed via the console when triggering manually.
 2. Make sure to pass the right AWS Account ID and region as Inputs.
-3. A sample ECR lifecycle policy is added here at "e2e-test/policy.json". Refer next section for more informetion.
+3. A sample ECR lifecycle policy is added here at "e2e-test/policy.json". Refer next section for more information.
 4. Two IAM roles are required as inputs:
   a. An IAM role with permissions to setup the Terraform S3 backend and provided as input `backend_iam_role`
   b. An IAM role with permissions to Github, which is also used in the ECR policy to restrict ECR operations, refer `data.tf` file.
