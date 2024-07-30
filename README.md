@@ -33,9 +33,9 @@ This solution has the flag as "workflow_dispatch", but this can be replaced with
 - An active AWS account
 - A Github Account
 - A Github Repository created
-- [OpenID Connect configured in AWS](#https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
-- [Terraform v1 or above installed and configured](#https://developer.hashicorp.com/terraform/install)
-- [An S3 bucket for the Terraform Backend[(#https://developer.hashicorp.com/terraform/language/settings/backends/s3)
+- [OpenID connect configured in AWS](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
+- [Terraform v1 or above installed and configured](https://developer.hashicorp.com/terraform/install)
+- [An S3 bucket for the Terraform Backend](https://developer.hashicorp.com/terraform/language/settings/backends/s3)
 - A DynamoDB table for Terraform State Locking and consistency. The table must have a partition key named LockID with type of String. If not configured, state locking will be disabled.
 
 ## Setup
